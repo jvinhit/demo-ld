@@ -1,0 +1,44 @@
+.noselect {
+  -webkit-user-select: none; /* Safari */
+  -webkit-touch-callout: none; /* iOS Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  -moz-user-select: none; /* Old versions of Firefox */
+  user-select: none; /* Non-prefixed version*/
+}
+.cell {
+  border-right: 1px solid #e8e8e8;
+  border-bottom: 1px solid #e8e8e8;
+  padding: 0 12px;
+  height: 32px;
+  line-height: 32px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  background-color: #fff;
+  cursor: pointer;
+  .noselect();
+}
+
+.input {
+  position: fixed;
+  z-index: 1;
+  border-radius: 0;
+  &:placeholder-shown {
+    text-overflow: ellipsis;
+  }
+}
+
+.active {
+  outline: 0;
+  border: 1px solid #40a9ff;
+  border-radius: 2px;
+  transition: all 0.1s;
+  box-shadow: 0 0 0 2px #1890ff33;
+}
+.selected {
+  border: 1px solid #40a9ff;
+  border-radius: 2px;
+  transition: all 0.1s;
+}
+
